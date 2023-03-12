@@ -1,0 +1,11 @@
+CREATE OR REPLACE FUNCTION GetUsers()
+RETURNS TABLE (
+    id INTEGER,
+    firstName TEXT,
+    lastName TEXT,
+    email TEXT
+) AS $$
+BEGIN
+    RETURN QUERY SELECT * FROM USERS;
+END;
+$$
